@@ -16,7 +16,7 @@ def main():
         output_file = None
         
     with open(args.input) as input_file, open(args.benchmark, 'w') as benchmark_file:
-        for input_line in input_file:
+        for input_line in input_file.readlines():
             string1, string2 = input_line.strip().split(',')
             current_start = time.time()
             diff = levenshtein(string1, string2)
@@ -53,5 +53,4 @@ def parse_arguments():
 
 
 if __name__ == '__main__':
-    print __file__
     main()
