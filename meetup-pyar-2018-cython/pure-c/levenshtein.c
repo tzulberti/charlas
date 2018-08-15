@@ -12,27 +12,27 @@
 int main(int argc, char* argv[])
 {
 
-	int i = 0;
+    int i = 0;
     
     char const* const fileName = argv[1]; /* should check that argc > 1 */
     char **file_content = (char **) malloc(sizeof(char*) * MAX_NUMBER_OF_LINES_IN_FILE);
     FILE* file = fopen(fileName, "r"); /* should check the result */
 
-	for (i=0; 1; i++) {
+    for (i=0; 1; i++) {
         file_content[i] = malloc(MAX_LINE_LENGTH);
-		if (fgets(file_content[i], MAX_LINE_LENGTH-1, file) == NULL)
+        if (fgets(file_content[i], MAX_LINE_LENGTH-1, file) == NULL)
             break;
 
         /* Get rid of CR or LF at end of line */
-	    int j = 0;
+        int j = 0;
         for (j = strlen(file_content[i]) - 1 ; j>=0 && (file_content[i][j]=='\n' || file_content[i][j]=='\r') ; j--) {
             i;
-		}
+        }
         file_content[i][j+1]='\0';
-	}
+    }
     fclose(file);
 
-	clock_t t;
+    clock_t t;
     t = clock();
     do_logic(file_content, i);
     t = clock() - t;
@@ -46,20 +46,20 @@ int main(int argc, char* argv[])
 int do_logic(char** file_content, int max_lines) {
 
     char *str1, *str2, *token;
-	char *line_content;
+    char *line_content;
     char *saveptr1;
     for (int i = 0; i < max_lines; i++) {
-		int first = 1;
+        int first = 1;
         for (line_content = file_content[i]; ; line_content = NULL) {
-        	token = strtok_r(line_content, ",", &saveptr1);
-        	if (token == NULL)
-            	break;
-			if (first == 1)
-				str1 = token;
-			else
-				str2 = token;
-			first = 0;
-		}	
+            token = strtok_r(line_content, ",", &saveptr1);
+            if (token == NULL)
+                break;
+            if (first == 1)
+                str1 = token;
+            else
+                str2 = token;
+            first = 0;
+        }    
         if (PRINT_OUTPUT == 1)
             printf("%s %s %d\n", str1, str2, levenshtein(str1, str2));
     }
