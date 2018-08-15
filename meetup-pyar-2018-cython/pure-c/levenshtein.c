@@ -48,7 +48,8 @@ int do_logic(char** file_content, int max_lines) {
     char *str1, *str2, *token;
     char *line_content;
     char *saveptr1;
-    for (int i = 0; i < max_lines; i++) {
+    int i = 0;
+    for (i = 0; i < max_lines; i++) {
         int first = 1;
         for (line_content = file_content[i]; ; line_content = NULL) {
             token = strtok_r(line_content, ",", &saveptr1);
