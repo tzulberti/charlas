@@ -45,8 +45,9 @@ def get_words_from_github():
    
 
 words = get_words_from_github()
-with open('dataset.txt', 'w') as output:
-    lwords = list(words)
-    for i in range(0, len(lwords) - 1, 2):
-        output.write('%s,%s\n' % (lwords[i], lwords[i+1]))
+for step_size in (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15):
+    with open('dataset.%s.txt' % step_size, 'w') as output:
+        lwords = list(words)
+        for i in range(0, len(lwords) - step_size, step_size + 1):
+            output.write('%s,%s\n' % (lwords[i], lwords[i+step_size]))
 
