@@ -3,11 +3,11 @@
 /* BEGIN: Cython Metadata
 {
     "distutils": {
-        "name": "src.difference", 
+        "name": "src.difference",
         "sources": [
             "/media/data/Proyectos/charlas/meetup-pyar-2018-cython/cython-first-version/src/difference.py"
         ]
-    }, 
+    },
     "module_name": "src.difference"
 }
 END: Cython Metadata */

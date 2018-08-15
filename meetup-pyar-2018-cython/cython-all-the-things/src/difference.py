@@ -2,6 +2,20 @@
 
 import cython
 
+
+@cython.locals(
+    file_content=list,
+    string1=str,
+    string2=str,
+    input_line=str,
+)
+def call_for_inputs(file_content, output_file):
+    for input_line in file_content:
+        string1, string2 = input_line.strip().split(',')
+        diff = levenshtein(string1, string2)
+        if output_file:
+            output_file.write('%s\n' % diff)
+
 @cython.locals(
     seq1=str,
     seq2=str,
@@ -11,6 +25,7 @@ import cython
     x=cython.int,
     y=cython.int,
 )
+@cython.cfunc
 def levenshtein(seq1, seq2):  
     size_x = len(seq1) + 1
     size_y = len(seq2) + 1

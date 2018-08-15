@@ -23,7 +23,6 @@ setup(
     long_description=long_description,  
     ext_modules=cythonize(module_list=[
         "src/difference.py",
-        "src/main.py",
     ]),
     url='https://github.com/pypa/sampleproject',  
     author='The Python Packaging Authority',  
