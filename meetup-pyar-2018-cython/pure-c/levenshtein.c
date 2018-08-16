@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
-#include <time.h>
 
 #define MIN3(a, b, c) ((a) < (b) ? ((a) < (c) ? (a) : (c)) : ((b) < (c) ? (b) : (c)))
 
@@ -32,12 +31,7 @@ int main(int argc, char* argv[])
     }
     fclose(file);
 
-    clock_t t;
-    t = clock();
     do_logic(file_content, i);
-    t = clock() - t;
-    double time_taken = ((double)t)/CLOCKS_PER_SEC; // in seconds
-    printf("do_logic() took %f seconds to execute \n", time_taken);
 
     return 0;
 }
@@ -48,7 +42,8 @@ int do_logic(char** file_content, int max_lines) {
     char *str1, *str2, *token;
     char *line_content;
     char *saveptr1;
-    for (int i = 0; i < max_lines; i++) {
+    int i = 0;
+    for (i = 0; i < max_lines; i++) {
         int first = 1;
         for (line_content = file_content[i]; ; line_content = NULL) {
             token = strtok_r(line_content, ",", &saveptr1);
@@ -76,10 +71,9 @@ int levenshtein(char *s1, char *s2) {
     matrix[0][0] = 0;
 
     for (x = 1; x <= s2len; x++)
-        matrix[x][0] = matrix[x-1][0] + 1;
-
+        matrix[x][0] = x;
     for (y = 1; y <= s1len; y++)
-        matrix[0][y] = matrix[0][y-1] + 1;
+        matrix[0][y] = y;
 
     for (x = 1; x <= s2len; x++)
         for (y = 1; y <= s1len; y++)
