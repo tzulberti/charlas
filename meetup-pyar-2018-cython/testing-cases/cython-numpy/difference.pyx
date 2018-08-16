@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
 # cython: profile=True
 
+# https://cython.readthedocs.io/en/latest/src/tutorial/numpy.html
+
 import sys
 import numpy as np
 
