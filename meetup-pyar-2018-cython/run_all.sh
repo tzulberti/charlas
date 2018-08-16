@@ -9,6 +9,7 @@ pip install -r requirements.txt
 
 
 cd pure-c
+rm -rf time_output.txt
 gcc -o levenshtein levenshtein.c
 
 echo 'pure c benchmark' >> time_output.txt
@@ -30,6 +31,7 @@ echo 'pure c benchmark' >> time_output.txt
 
 
 cd ../pure-python
+rm -rf time_output.txt
 echo 'pure python benchmark' >> time_output.txt
 
 { time python main.py ../dataset.1.txt ; } 2>> time_output.txt
@@ -49,8 +51,10 @@ echo 'pure python benchmark' >> time_output.txt
 { time python main.py ../dataset.15.txt ; } 2>> time_output.txt
 
 cd ../cython-first-version
-echo 'cython-first-version benchmark' >> time_output.txt
+rm -rf time_output.txt
 rm -rf difference.c
+
+echo 'cython-first-version benchmark' >> time_output.txt
 cythonize --inplace difference.py
 
 { time python main.py ../dataset.1.txt ; } 2>> time_output.txt
@@ -70,8 +74,10 @@ cythonize --inplace difference.py
 { time python main.py ../dataset.15.txt ; } 2>> time_output.txt
 
 cd ../cython-types-version
-echo 'cython-types-version benchmark' >> time_output.txt
+rm -rf time_output.txt
 rm -rf difference.c
+
+echo 'cython-types-version benchmark' >> time_output.txt
 cythonize --inplace difference.py
 
 { time python main.py ../dataset.1.txt ; } 2>> time_output.txt
