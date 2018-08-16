@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
-#include <time.h>
 
 #define MIN3(a, b, c) ((a) < (b) ? ((a) < (c) ? (a) : (c)) : ((b) < (c) ? (b) : (c)))
 
@@ -32,12 +31,7 @@ int main(int argc, char* argv[])
     }
     fclose(file);
 
-    clock_t t;
-    t = clock();
     do_logic(file_content, i);
-    t = clock() - t;
-    double time_taken = ((double)t)/CLOCKS_PER_SEC; // in seconds
-    printf("do_logic() took %f seconds to execute \n", time_taken);
 
     return 0;
 }
@@ -75,9 +69,10 @@ int levenshtein(char *s1, char *s2) {
     unsigned int matrix[s2len+1][s1len+1];
     matrix[0][0] = 0;
     for (x = 1; x <= s2len; x++)
-        matrix[x][0] = matrix[x-1][0] + 1;
+        matrix[x][0] = x;
     for (y = 1; y <= s1len; y++)
-        matrix[0][y] = matrix[0][y-1] + 1;
+        matrix[0][y] = y;
+
     for (x = 1; x <= s2len; x++)
         for (y = 1; y <= s1len; y++)
             matrix[x][y] = MIN3(matrix[x-1][y] + 1, matrix[x][y-1] + 1, matrix[x-1][y-1] + (s1[y-1] == s2[x-1] ? 0 : 1));
