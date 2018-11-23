@@ -96,4 +96,51 @@ cythonize --inplace difference.py
 { time python main.py ../dataset.14.txt ; } 2>> time_output.txt
 { time python main.py ../dataset.15.txt ; } 2>> time_output.txt
 
+cd ../cython-all-the-things
+rm -rf time_output.txt
+rm -rf difference.c
+
+echo 'cython-all-the-things benchmark' >> time_output.txt
+cythonize --inplace difference.py
+
+{ time python main.py ../dataset.1.txt ; } 2>> time_output.txt
+{ time python main.py ../dataset.2.txt ; } 2>> time_output.txt
+{ time python main.py ../dataset.3.txt ; } 2>> time_output.txt
+{ time python main.py ../dataset.4.txt ; } 2>> time_output.txt
+{ time python main.py ../dataset.5.txt ; } 2>> time_output.txt
+{ time python main.py ../dataset.6.txt ; } 2>> time_output.txt
+{ time python main.py ../dataset.7.txt ; } 2>> time_output.txt
+{ time python main.py ../dataset.8.txt ; } 2>> time_output.txt
+{ time python main.py ../dataset.9.txt ; } 2>> time_output.txt
+{ time python main.py ../dataset.10.txt ; } 2>> time_output.txt
+{ time python main.py ../dataset.11.txt ; } 2>> time_output.txt
+{ time python main.py ../dataset.12.txt ; } 2>> time_output.txt
+{ time python main.py ../dataset.13.txt ; } 2>> time_output.txt
+{ time python main.py ../dataset.14.txt ; } 2>> time_output.txt
+{ time python main.py ../dataset.15.txt ; } 2>> time_output.txt
+
+
+cd ../cython-optimizations
+rm -rf time_output.txt
+rm -rf difference.c
+
+echo 'cython-optimizations benchmark' >> time_output.txt
+cythonize --inplace difference.py
+
+{ time python main.py ../dataset.1.txt ; } 2>> time_output.txt
+{ time python main.py ../dataset.2.txt ; } 2>> time_output.txt
+{ time python main.py ../dataset.3.txt ; } 2>> time_output.txt
+{ time python main.py ../dataset.4.txt ; } 2>> time_output.txt
+{ time python main.py ../dataset.5.txt ; } 2>> time_output.txt
+{ time python main.py ../dataset.6.txt ; } 2>> time_output.txt
+{ time python main.py ../dataset.7.txt ; } 2>> time_output.txt
+{ time python main.py ../dataset.8.txt ; } 2>> time_output.txt
+{ time python main.py ../dataset.9.txt ; } 2>> time_output.txt
+{ time python main.py ../dataset.10.txt ; } 2>> time_output.txt
+{ time python main.py ../dataset.11.txt ; } 2>> time_output.txt
+{ time python main.py ../dataset.12.txt ; } 2>> time_output.txt
+{ time python main.py ../dataset.13.txt ; } 2>> time_output.txt
+{ time python main.py ../dataset.14.txt ; } 2>> time_output.txt
+{ time python main.py ../dataset.15.txt ; } 2>> time_output.txt
+
 
