@@ -5,7 +5,7 @@
     "distutils": {
         "name": "difference",
         "sources": [
-            "/media/data/Proyectos/charlas/meetup-pyar-2018-cython/cython-first-version/difference.py"
+            "/home/supertomas/workspace/charlas/pyconar-2018/cython-first-version/difference.py"
         ]
     },
     "module_name": "difference"

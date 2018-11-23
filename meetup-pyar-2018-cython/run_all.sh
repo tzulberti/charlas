@@ -4,7 +4,7 @@ find . -name "*.so" -exec rm -rf {} \;
 find . -name "*.pyo" -exec rm -rf {} \;
 rm -rf pure-c/levenshtein
 
-source ~/envs/charlas/bin/activate
+source ~/charlas/bin/activate
 pip install -r requirements.txt
 
 
@@ -120,6 +120,8 @@ cythonize --inplace difference.py
 { time python main.py ../dataset.15.txt ; } 2>> time_output.txt
 
 
+deactivate
+source ~/envs/charlas2/bin/activate
 cd ../cython-optimizations
 rm -rf time_output.txt
 rm -rf difference.c

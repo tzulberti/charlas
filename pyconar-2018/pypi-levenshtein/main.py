@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 import sys
-from difference import levenshtein 
+import Levenshtein
 
 OUTPUT = 0
 
@@ -17,7 +17,7 @@ def main():
 def do_logic(file_content):
     for input_line in file_content:
         string1, string2 = input_line.split(',')
-        diff = levenshtein(string1, string2)
+        diff = Levenshtein.distance(string1, string2)
         if OUTPUT:
             print('%s %s %d' % (string1, string2, diff))
  

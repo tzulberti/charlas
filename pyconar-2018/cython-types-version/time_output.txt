@@ -1,0 +1,17 @@
+cython-types-version benchmark
+
+real	0m3.724s
+user	0m3.134s
+sys	0m0.083s
+
+real	0m1.656s
+user	0m1.550s
+sys	0m0.055s
+
+real	0m0.883s
+user	0m0.866s
+sys	0m0.009s
+
+real	0m0.476s
+user	0m0.465s
+sys	0m0.005s

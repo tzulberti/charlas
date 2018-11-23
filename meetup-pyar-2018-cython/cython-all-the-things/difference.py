@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
-# cython:infer_types=True
 
 import sys
+import cython
 
 OUTPUT = 0
 
@@ -12,7 +12,11 @@ def main():
         file_content = map(lambda line: line.strip(), file_content)
         do_logic(file_content)
 
-
+@cython.locals(
+    input_line=str,
+    string1=str,
+    string2=str
+)
 def do_logic(file_content):
     for input_line in file_content:
         string1, string2 = input_line.split(',')
@@ -20,7 +24,15 @@ def do_logic(file_content):
         if OUTPUT:
             print('%s %s %d' % (string1, string2, diff))
 
-
+@cython.locals(
+    seq1=str,
+    seq2=str,
+    matrix=list,
+    size_x=cython.int,
+    size_y=cython.int,
+    x=cython.int,
+    y=cython.int,
+)
 def levenshtein(seq1, seq2):
     size_x = len(seq1) + 1
     size_y = len(seq2) + 1

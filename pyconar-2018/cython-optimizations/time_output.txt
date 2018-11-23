@@ -1,0 +1,17 @@
+cython-optimizations benchmark
+
+real	0m2.178s
+user	0m0.723s
+sys	0m0.222s
+
+real	0m0.551s
+user	0m0.438s
+sys	0m0.213s
+
+real	0m0.352s
+user	0m0.249s
+sys	0m0.126s
+
+real	0m0.223s
+user	0m0.165s
+sys	0m0.212s

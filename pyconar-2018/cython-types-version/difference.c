@@ -5,7 +5,7 @@
     "distutils": {
         "name": "difference",
         "sources": [
-            "/media/data/Proyectos/charlas/meetup-pyar-2018-cython/cython-types-version/difference.py"
+            "/home/supertomas/workspace/charlas/pyconar-2018/cython-types-version/difference.py"
         ]
     },
     "module_name": "difference"
@@ -1331,7 +1331,7 @@ static PyObject *__pyx_codeobj_;
 static PyObject *__pyx_tuple__3;
 /* Late includes */
 
-/* "difference.py":14
+/* "difference.py":15
  *     y=cython.int,
  * )
  * def levenshtein(seq1, seq2):             # <<<<<<<<<<<<<<
@@ -1371,11 +1371,11 @@ static PyObject *__pyx_pw_10difference_1levenshtein(PyObject *__pyx_self, PyObje
         case  1:
         if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_seq2)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("levenshtein", 1, 2, 2, 1); __PYX_ERR(0, 14, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("levenshtein", 1, 2, 2, 1); __PYX_ERR(0, 15, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "levenshtein") < 0)) __PYX_ERR(0, 14, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "levenshtein") < 0)) __PYX_ERR(0, 15, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 2) {
       goto __pyx_L5_argtuple_error;
@@ -1388,14 +1388,14 @@ static PyObject *__pyx_pw_10difference_1levenshtein(PyObject *__pyx_self, PyObje
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("levenshtein", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 14, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("levenshtein", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 15, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("difference.levenshtein", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_seq1), (&PyString_Type), 1, "seq1", 1))) __PYX_ERR(0, 14, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_seq2), (&PyString_Type), 1, "seq2", 1))) __PYX_ERR(0, 14, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_seq1), (&PyString_Type), 1, "seq1", 1))) __PYX_ERR(0, 15, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_seq2), (&PyString_Type), 1, "seq2", 1))) __PYX_ERR(0, 15, __pyx_L1_error)
   __pyx_r = __pyx_pf_10difference_levenshtein(__pyx_self, __pyx_v_seq1, __pyx_v_seq2);
 
   /* function exit code */
@@ -1408,11 +1408,11 @@ static PyObject *__pyx_pw_10difference_1levenshtein(PyObject *__pyx_self, PyObje
 }
 
 static PyObject *__pyx_pf_10difference_levenshtein(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_seq1, PyObject *__pyx_v_seq2) {
-  PyObject *__pyx_v_matrix = 0;
-  int __pyx_v_y;
   int __pyx_v_x;
-  int __pyx_v_size_y;
   int __pyx_v_size_x;
+  PyObject *__pyx_v_matrix = 0;
+  int __pyx_v_size_y;
+  int __pyx_v_y;
   PyObject *__pyx_v_substitution_cost = NULL;
   CYTHON_UNUSED int __pyx_v__;
   PyObject *__pyx_r = NULL;
@@ -1434,42 +1434,42 @@ static PyObject *__pyx_pf_10difference_levenshtein(CYTHON_UNUSED PyObject *__pyx
   PyObject *__pyx_t_14 = NULL;
   __Pyx_TraceFrameInit(__pyx_codeobj_)
   __Pyx_RefNannySetupContext("levenshtein", 0);
-  __Pyx_TraceCall("levenshtein", __pyx_f[0], 14, 0, __PYX_ERR(0, 14, __pyx_L1_error));
+  __Pyx_TraceCall("levenshtein", __pyx_f[0], 15, 0, __PYX_ERR(0, 15, __pyx_L1_error));
 
-  /* "difference.py":15
+  /* "difference.py":16
  * )
  * def levenshtein(seq1, seq2):
  *     size_x = len(seq1) + 1             # <<<<<<<<<<<<<<
  *     size_y = len(seq2) + 1
  *     matrix = [[0] * size_y for _ in range(size_x)]
  */
-  __pyx_t_1 = PyObject_Length(__pyx_v_seq1); if (unlikely(__pyx_t_1 == ((Py_ssize_t)-1))) __PYX_ERR(0, 15, __pyx_L1_error)
+  __pyx_t_1 = PyObject_Length(__pyx_v_seq1); if (unlikely(__pyx_t_1 == ((Py_ssize_t)-1))) __PYX_ERR(0, 16, __pyx_L1_error)
   __pyx_v_size_x = (__pyx_t_1 + 1);
 
-  /* "difference.py":16
+  /* "difference.py":17
  * def levenshtein(seq1, seq2):
  *     size_x = len(seq1) + 1
  *     size_y = len(seq2) + 1             # <<<<<<<<<<<<<<
  *     matrix = [[0] * size_y for _ in range(size_x)]
  * 
  */
-  __pyx_t_1 = PyObject_Length(__pyx_v_seq2); if (unlikely(__pyx_t_1 == ((Py_ssize_t)-1))) __PYX_ERR(0, 16, __pyx_L1_error)
+  __pyx_t_1 = PyObject_Length(__pyx_v_seq2); if (unlikely(__pyx_t_1 == ((Py_ssize_t)-1))) __PYX_ERR(0, 17, __pyx_L1_error)
   __pyx_v_size_y = (__pyx_t_1 + 1);
 
-  /* "difference.py":17
+  /* "difference.py":18
  *     size_x = len(seq1) + 1
  *     size_y = len(seq2) + 1
  *     matrix = [[0] * size_y for _ in range(size_x)]             # <<<<<<<<<<<<<<
  * 
  *     for x in range(size_x):
  */
-  __pyx_t_2 = PyList_New(0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 17, __pyx_L1_error)
+  __pyx_t_2 = PyList_New(0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 18, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_3 = __pyx_v_size_x;
   __pyx_t_4 = __pyx_t_3;
   for (__pyx_t_5 = 0; __pyx_t_5 < __pyx_t_4; __pyx_t_5+=1) {
     __pyx_v__ = __pyx_t_5;
-    __pyx_t_6 = PyList_New(1 * ((__pyx_v_size_y<0) ? 0:__pyx_v_size_y)); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 17, __pyx_L1_error)
+    __pyx_t_6 = PyList_New(1 * ((__pyx_v_size_y<0) ? 0:__pyx_v_size_y)); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 18, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
     { Py_ssize_t __pyx_temp;
       for (__pyx_temp=0; __pyx_temp < __pyx_v_size_y; __pyx_temp++) {
@@ -1478,13 +1478,13 @@ static PyObject *__pyx_pf_10difference_levenshtein(CYTHON_UNUSED PyObject *__pyx
         PyList_SET_ITEM(__pyx_t_6, __pyx_temp, __pyx_int_0);
       }
     }
-    if (unlikely(__Pyx_ListComp_Append(__pyx_t_2, (PyObject*)__pyx_t_6))) __PYX_ERR(0, 17, __pyx_L1_error)
+    if (unlikely(__Pyx_ListComp_Append(__pyx_t_2, (PyObject*)__pyx_t_6))) __PYX_ERR(0, 18, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
   }
   __pyx_v_matrix = ((PyObject*)__pyx_t_2);
   __pyx_t_2 = 0;
 
-  /* "difference.py":19
+  /* "difference.py":20
  *     matrix = [[0] * size_y for _ in range(size_x)]
  * 
  *     for x in range(size_x):             # <<<<<<<<<<<<<<
@@ -1496,23 +1496,23 @@ static PyObject *__pyx_pf_10difference_levenshtein(CYTHON_UNUSED PyObject *__pyx
   for (__pyx_t_5 = 0; __pyx_t_5 < __pyx_t_4; __pyx_t_5+=1) {
     __pyx_v_x = __pyx_t_5;
 
-    /* "difference.py":20
+    /* "difference.py":21
  * 
  *     for x in range(size_x):
  *         matrix[x][0] = x             # <<<<<<<<<<<<<<
  *     for y in range(size_y):
  *         matrix[0][y] = y
  */
-    __pyx_t_2 = __Pyx_PyInt_From_int(__pyx_v_x); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 20, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyInt_From_int(__pyx_v_x); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 21, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_6 = __Pyx_GetItemInt_List(__pyx_v_matrix, __pyx_v_x, int, 1, __Pyx_PyInt_From_int, 1, 1, 1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 20, __pyx_L1_error)
+    __pyx_t_6 = __Pyx_GetItemInt_List(__pyx_v_matrix, __pyx_v_x, int, 1, __Pyx_PyInt_From_int, 1, 1, 1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 21, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
-    if (unlikely(__Pyx_SetItemInt(__pyx_t_6, 0, __pyx_t_2, long, 1, __Pyx_PyInt_From_long, 0, 0, 1) < 0)) __PYX_ERR(0, 20, __pyx_L1_error)
+    if (unlikely(__Pyx_SetItemInt(__pyx_t_6, 0, __pyx_t_2, long, 1, __Pyx_PyInt_From_long, 0, 0, 1) < 0)) __PYX_ERR(0, 21, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   }
 
-  /* "difference.py":21
+  /* "difference.py":22
  *     for x in range(size_x):
  *         matrix[x][0] = x
  *     for y in range(size_y):             # <<<<<<<<<<<<<<
@@ -1524,23 +1524,23 @@ static PyObject *__pyx_pf_10difference_levenshtein(CYTHON_UNUSED PyObject *__pyx
   for (__pyx_t_5 = 0; __pyx_t_5 < __pyx_t_4; __pyx_t_5+=1) {
     __pyx_v_y = __pyx_t_5;
 
-    /* "difference.py":22
+    /* "difference.py":23
  *         matrix[x][0] = x
  *     for y in range(size_y):
  *         matrix[0][y] = y             # <<<<<<<<<<<<<<
  * 
  *     for x in range(1, size_x):
  */
-    __pyx_t_2 = __Pyx_PyInt_From_int(__pyx_v_y); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 22, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyInt_From_int(__pyx_v_y); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 23, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_6 = __Pyx_GetItemInt_List(__pyx_v_matrix, 0, long, 1, __Pyx_PyInt_From_long, 1, 0, 1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 22, __pyx_L1_error)
+    __pyx_t_6 = __Pyx_GetItemInt_List(__pyx_v_matrix, 0, long, 1, __Pyx_PyInt_From_long, 1, 0, 1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 23, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
-    if (unlikely(__Pyx_SetItemInt(__pyx_t_6, __pyx_v_y, __pyx_t_2, int, 1, __Pyx_PyInt_From_int, 0, 1, 1) < 0)) __PYX_ERR(0, 22, __pyx_L1_error)
+    if (unlikely(__Pyx_SetItemInt(__pyx_t_6, __pyx_v_y, __pyx_t_2, int, 1, __Pyx_PyInt_From_int, 0, 1, 1) < 0)) __PYX_ERR(0, 23, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   }
 
-  /* "difference.py":24
+  /* "difference.py":25
  *         matrix[0][y] = y
  * 
  *     for x in range(1, size_x):             # <<<<<<<<<<<<<<
@@ -1552,7 +1552,7 @@ static PyObject *__pyx_pf_10difference_levenshtein(CYTHON_UNUSED PyObject *__pyx
   for (__pyx_t_5 = 1; __pyx_t_5 < __pyx_t_4; __pyx_t_5+=1) {
     __pyx_v_x = __pyx_t_5;
 
-    /* "difference.py":25
+    /* "difference.py":26
  * 
  *     for x in range(1, size_x):
  *         for y in range(1, size_y):             # <<<<<<<<<<<<<<
@@ -1564,7 +1564,7 @@ static PyObject *__pyx_pf_10difference_levenshtein(CYTHON_UNUSED PyObject *__pyx
     for (__pyx_t_9 = 1; __pyx_t_9 < __pyx_t_8; __pyx_t_9+=1) {
       __pyx_v_y = __pyx_t_9;
 
-      /* "difference.py":26
+      /* "difference.py":27
  *     for x in range(1, size_x):
  *         for y in range(1, size_y):
  *             if seq1[x-1] == seq2[y-1]:             # <<<<<<<<<<<<<<
@@ -1572,19 +1572,19 @@ static PyObject *__pyx_pf_10difference_levenshtein(CYTHON_UNUSED PyObject *__pyx
  *             else:
  */
       __pyx_t_10 = (__pyx_v_x - 1);
-      __pyx_t_2 = __Pyx_GetItemInt(__pyx_v_seq1, __pyx_t_10, long, 1, __Pyx_PyInt_From_long, 0, 1, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 26, __pyx_L1_error)
+      __pyx_t_2 = __Pyx_GetItemInt(__pyx_v_seq1, __pyx_t_10, long, 1, __Pyx_PyInt_From_long, 0, 1, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 27, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
       __pyx_t_10 = (__pyx_v_y - 1);
-      __pyx_t_6 = __Pyx_GetItemInt(__pyx_v_seq2, __pyx_t_10, long, 1, __Pyx_PyInt_From_long, 0, 1, 1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 26, __pyx_L1_error)
+      __pyx_t_6 = __Pyx_GetItemInt(__pyx_v_seq2, __pyx_t_10, long, 1, __Pyx_PyInt_From_long, 0, 1, 1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 27, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_6);
-      __pyx_t_11 = PyObject_RichCompare(__pyx_t_2, __pyx_t_6, Py_EQ); __Pyx_XGOTREF(__pyx_t_11); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 26, __pyx_L1_error)
+      __pyx_t_11 = PyObject_RichCompare(__pyx_t_2, __pyx_t_6, Py_EQ); __Pyx_XGOTREF(__pyx_t_11); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 27, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
       __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-      __pyx_t_12 = __Pyx_PyObject_IsTrue(__pyx_t_11); if (unlikely(__pyx_t_12 < 0)) __PYX_ERR(0, 26, __pyx_L1_error)
+      __pyx_t_12 = __Pyx_PyObject_IsTrue(__pyx_t_11); if (unlikely(__pyx_t_12 < 0)) __PYX_ERR(0, 27, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
       if (__pyx_t_12) {
 
-        /* "difference.py":27
+        /* "difference.py":28
  *         for y in range(1, size_y):
  *             if seq1[x-1] == seq2[y-1]:
  *                 substitution_cost = 0             # <<<<<<<<<<<<<<
@@ -1594,7 +1594,7 @@ static PyObject *__pyx_pf_10difference_levenshtein(CYTHON_UNUSED PyObject *__pyx
         __Pyx_INCREF(__pyx_int_0);
         __Pyx_XDECREF_SET(__pyx_v_substitution_cost, __pyx_int_0);
 
-        /* "difference.py":26
+        /* "difference.py":27
  *     for x in range(1, size_x):
  *         for y in range(1, size_y):
  *             if seq1[x-1] == seq2[y-1]:             # <<<<<<<<<<<<<<
@@ -1604,7 +1604,7 @@ static PyObject *__pyx_pf_10difference_levenshtein(CYTHON_UNUSED PyObject *__pyx
         goto __pyx_L13;
       }
 
-      /* "difference.py":29
+      /* "difference.py":30
  *                 substitution_cost = 0
  *             else:
  *                 substitution_cost = 1             # <<<<<<<<<<<<<<
@@ -1617,24 +1617,24 @@ static PyObject *__pyx_pf_10difference_levenshtein(CYTHON_UNUSED PyObject *__pyx
       }
       __pyx_L13:;
 
-      /* "difference.py":33
+      /* "difference.py":34
  *             matrix[x][y] = min(
  *                 matrix[x-1][y] + 1,  # deletion
  *                 matrix[x][y-1] + 1,  # insertion             # <<<<<<<<<<<<<<
  *                 matrix[x-1][y-1] + substitution_cost, #substitution
  *             )
  */
-      __pyx_t_11 = __Pyx_GetItemInt_List(__pyx_v_matrix, __pyx_v_x, int, 1, __Pyx_PyInt_From_int, 1, 1, 1); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 33, __pyx_L1_error)
+      __pyx_t_11 = __Pyx_GetItemInt_List(__pyx_v_matrix, __pyx_v_x, int, 1, __Pyx_PyInt_From_int, 1, 1, 1); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 34, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_11);
       __pyx_t_10 = (__pyx_v_y - 1);
-      __pyx_t_6 = __Pyx_GetItemInt(__pyx_t_11, __pyx_t_10, long, 1, __Pyx_PyInt_From_long, 0, 1, 1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 33, __pyx_L1_error)
+      __pyx_t_6 = __Pyx_GetItemInt(__pyx_t_11, __pyx_t_10, long, 1, __Pyx_PyInt_From_long, 0, 1, 1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 34, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_6);
       __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
-      __pyx_t_11 = __Pyx_PyInt_AddObjC(__pyx_t_6, __pyx_int_1, 1, 0); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 33, __pyx_L1_error)
+      __pyx_t_11 = __Pyx_PyInt_AddObjC(__pyx_t_6, __pyx_int_1, 1, 0); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 34, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_11);
       __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
 
-      /* "difference.py":34
+      /* "difference.py":35
  *                 matrix[x-1][y] + 1,  # deletion
  *                 matrix[x][y-1] + 1,  # insertion
  *                 matrix[x-1][y-1] + substitution_cost, #substitution             # <<<<<<<<<<<<<<
@@ -1642,17 +1642,17 @@ static PyObject *__pyx_pf_10difference_levenshtein(CYTHON_UNUSED PyObject *__pyx
  * 
  */
       __pyx_t_10 = (__pyx_v_x - 1);
-      __pyx_t_6 = __Pyx_GetItemInt_List(__pyx_v_matrix, __pyx_t_10, long, 1, __Pyx_PyInt_From_long, 1, 1, 1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 34, __pyx_L1_error)
+      __pyx_t_6 = __Pyx_GetItemInt_List(__pyx_v_matrix, __pyx_t_10, long, 1, __Pyx_PyInt_From_long, 1, 1, 1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 35, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_6);
       __pyx_t_10 = (__pyx_v_y - 1);
-      __pyx_t_2 = __Pyx_GetItemInt(__pyx_t_6, __pyx_t_10, long, 1, __Pyx_PyInt_From_long, 0, 1, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 34, __pyx_L1_error)
+      __pyx_t_2 = __Pyx_GetItemInt(__pyx_t_6, __pyx_t_10, long, 1, __Pyx_PyInt_From_long, 0, 1, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 35, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
       __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-      __pyx_t_6 = PyNumber_Add(__pyx_t_2, __pyx_v_substitution_cost); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 34, __pyx_L1_error)
+      __pyx_t_6 = PyNumber_Add(__pyx_t_2, __pyx_v_substitution_cost); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 35, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_6);
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-      /* "difference.py":32
+      /* "difference.py":33
  * 
  *             matrix[x][y] = min(
  *                 matrix[x-1][y] + 1,  # deletion             # <<<<<<<<<<<<<<
@@ -1660,24 +1660,24 @@ static PyObject *__pyx_pf_10difference_levenshtein(CYTHON_UNUSED PyObject *__pyx
  *                 matrix[x-1][y-1] + substitution_cost, #substitution
  */
       __pyx_t_10 = (__pyx_v_x - 1);
-      __pyx_t_2 = __Pyx_GetItemInt_List(__pyx_v_matrix, __pyx_t_10, long, 1, __Pyx_PyInt_From_long, 1, 1, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 32, __pyx_L1_error)
+      __pyx_t_2 = __Pyx_GetItemInt_List(__pyx_v_matrix, __pyx_t_10, long, 1, __Pyx_PyInt_From_long, 1, 1, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 33, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
-      __pyx_t_13 = __Pyx_GetItemInt(__pyx_t_2, __pyx_v_y, int, 1, __Pyx_PyInt_From_int, 0, 1, 1); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 32, __pyx_L1_error)
+      __pyx_t_13 = __Pyx_GetItemInt(__pyx_t_2, __pyx_v_y, int, 1, __Pyx_PyInt_From_int, 0, 1, 1); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 33, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_13);
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-      __pyx_t_2 = __Pyx_PyInt_AddObjC(__pyx_t_13, __pyx_int_1, 1, 0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 32, __pyx_L1_error)
+      __pyx_t_2 = __Pyx_PyInt_AddObjC(__pyx_t_13, __pyx_int_1, 1, 0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 33, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
       __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
 
-      /* "difference.py":33
+      /* "difference.py":34
  *             matrix[x][y] = min(
  *                 matrix[x-1][y] + 1,  # deletion
  *                 matrix[x][y-1] + 1,  # insertion             # <<<<<<<<<<<<<<
  *                 matrix[x-1][y-1] + substitution_cost, #substitution
  *             )
  */
-      __pyx_t_14 = PyObject_RichCompare(__pyx_t_11, __pyx_t_2, Py_LT); __Pyx_XGOTREF(__pyx_t_14); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 33, __pyx_L1_error)
-      __pyx_t_12 = __Pyx_PyObject_IsTrue(__pyx_t_14); if (unlikely(__pyx_t_12 < 0)) __PYX_ERR(0, 33, __pyx_L1_error)
+      __pyx_t_14 = PyObject_RichCompare(__pyx_t_11, __pyx_t_2, Py_LT); __Pyx_XGOTREF(__pyx_t_14); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 34, __pyx_L1_error)
+      __pyx_t_12 = __Pyx_PyObject_IsTrue(__pyx_t_14); if (unlikely(__pyx_t_12 < 0)) __PYX_ERR(0, 34, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
       if (__pyx_t_12) {
         __Pyx_INCREF(__pyx_t_11);
@@ -1691,15 +1691,15 @@ static PyObject *__pyx_pf_10difference_levenshtein(CYTHON_UNUSED PyObject *__pyx
       __pyx_t_2 = __pyx_t_13;
       __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
 
-      /* "difference.py":34
+      /* "difference.py":35
  *                 matrix[x-1][y] + 1,  # deletion
  *                 matrix[x][y-1] + 1,  # insertion
  *                 matrix[x-1][y-1] + substitution_cost, #substitution             # <<<<<<<<<<<<<<
  *             )
  * 
  */
-      __pyx_t_14 = PyObject_RichCompare(__pyx_t_6, __pyx_t_2, Py_LT); __Pyx_XGOTREF(__pyx_t_14); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 34, __pyx_L1_error)
-      __pyx_t_12 = __Pyx_PyObject_IsTrue(__pyx_t_14); if (unlikely(__pyx_t_12 < 0)) __PYX_ERR(0, 34, __pyx_L1_error)
+      __pyx_t_14 = PyObject_RichCompare(__pyx_t_6, __pyx_t_2, Py_LT); __Pyx_XGOTREF(__pyx_t_14); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 35, __pyx_L1_error)
+      __pyx_t_12 = __Pyx_PyObject_IsTrue(__pyx_t_14); if (unlikely(__pyx_t_12 < 0)) __PYX_ERR(0, 35, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
       if (__pyx_t_12) {
         __Pyx_INCREF(__pyx_t_6);
@@ -1715,39 +1715,39 @@ static PyObject *__pyx_pf_10difference_levenshtein(CYTHON_UNUSED PyObject *__pyx
       __Pyx_INCREF(__pyx_t_11);
       __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
 
-      /* "difference.py":31
+      /* "difference.py":32
  *                 substitution_cost = 1
  * 
  *             matrix[x][y] = min(             # <<<<<<<<<<<<<<
  *                 matrix[x-1][y] + 1,  # deletion
  *                 matrix[x][y-1] + 1,  # insertion
  */
-      __pyx_t_13 = __Pyx_GetItemInt_List(__pyx_v_matrix, __pyx_v_x, int, 1, __Pyx_PyInt_From_int, 1, 1, 1); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 31, __pyx_L1_error)
+      __pyx_t_13 = __Pyx_GetItemInt_List(__pyx_v_matrix, __pyx_v_x, int, 1, __Pyx_PyInt_From_int, 1, 1, 1); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 32, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_13);
-      if (unlikely(__Pyx_SetItemInt(__pyx_t_13, __pyx_v_y, __pyx_t_11, int, 1, __Pyx_PyInt_From_int, 0, 1, 1) < 0)) __PYX_ERR(0, 31, __pyx_L1_error)
+      if (unlikely(__Pyx_SetItemInt(__pyx_t_13, __pyx_v_y, __pyx_t_11, int, 1, __Pyx_PyInt_From_int, 0, 1, 1) < 0)) __PYX_ERR(0, 32, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
       __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
     }
   }
 
-  /* "difference.py":37
+  /* "difference.py":38
  *             )
  * 
  *     return matrix[size_x - 1][size_y - 1]             # <<<<<<<<<<<<<<
  */
   __Pyx_XDECREF(__pyx_r);
   __pyx_t_10 = (__pyx_v_size_x - 1);
-  __pyx_t_11 = __Pyx_GetItemInt_List(__pyx_v_matrix, __pyx_t_10, long, 1, __Pyx_PyInt_From_long, 1, 1, 1); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 37, __pyx_L1_error)
+  __pyx_t_11 = __Pyx_GetItemInt_List(__pyx_v_matrix, __pyx_t_10, long, 1, __Pyx_PyInt_From_long, 1, 1, 1); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 38, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_11);
   __pyx_t_10 = (__pyx_v_size_y - 1);
-  __pyx_t_13 = __Pyx_GetItemInt(__pyx_t_11, __pyx_t_10, long, 1, __Pyx_PyInt_From_long, 0, 1, 1); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 37, __pyx_L1_error)
+  __pyx_t_13 = __Pyx_GetItemInt(__pyx_t_11, __pyx_t_10, long, 1, __Pyx_PyInt_From_long, 0, 1, 1); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 38, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_13);
   __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
   __pyx_r = __pyx_t_13;
   __pyx_t_13 = 0;
   goto __pyx_L0;
 
-  /* "difference.py":14
+  /* "difference.py":15
  *     y=cython.int,
  * )
  * def levenshtein(seq1, seq2):             # <<<<<<<<<<<<<<
@@ -1829,7 +1829,7 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {0, 0, 0, 0, 0, 0, 0}
 };
 static int __Pyx_InitCachedBuiltins(void) {
-  __pyx_builtin_range = __Pyx_GetBuiltinName(__pyx_n_s_range); if (!__pyx_builtin_range) __PYX_ERR(0, 17, __pyx_L1_error)
+  __pyx_builtin_range = __Pyx_GetBuiltinName(__pyx_n_s_range); if (!__pyx_builtin_range) __PYX_ERR(0, 18, __pyx_L1_error)
   return 0;
   __pyx_L1_error:;
   return -1;
@@ -1839,17 +1839,17 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__Pyx_InitCachedConstants", 0);
 
-  /* "difference.py":14
+  /* "difference.py":15
  *     y=cython.int,
  * )
  * def levenshtein(seq1, seq2):             # <<<<<<<<<<<<<<
  *     size_x = len(seq1) + 1
  *     size_y = len(seq2) + 1
  */
-  __pyx_tuple__3 = PyTuple_Pack(9, __pyx_n_s_seq1, __pyx_n_s_seq2, __pyx_n_s_matrix, __pyx_n_s_y, __pyx_n_s_x, __pyx_n_s_size_y, __pyx_n_s_size_x, __pyx_n_s_substitution_cost, __pyx_n_s__2); if (unlikely(!__pyx_tuple__3)) __PYX_ERR(0, 14, __pyx_L1_error)
+  __pyx_tuple__3 = PyTuple_Pack(9, __pyx_n_s_seq1, __pyx_n_s_seq2, __pyx_n_s_x, __pyx_n_s_size_x, __pyx_n_s_matrix, __pyx_n_s_size_y, __pyx_n_s_y, __pyx_n_s_substitution_cost, __pyx_n_s__2); if (unlikely(!__pyx_tuple__3)) __PYX_ERR(0, 15, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__3);
   __Pyx_GIVEREF(__pyx_tuple__3);
-  __pyx_codeobj_ = (PyObject*)__Pyx_PyCode_New(2, 0, 9, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__3, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_difference_py, __pyx_n_s_levenshtein, 14, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj_)) __PYX_ERR(0, 14, __pyx_L1_error)
+  __pyx_codeobj_ = (PyObject*)__Pyx_PyCode_New(2, 0, 9, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__3, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_difference_py, __pyx_n_s_levenshtein, 15, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj_)) __PYX_ERR(0, 15, __pyx_L1_error)
   __Pyx_RefNannyFinishContext();
   return 0;
   __pyx_L1_error:;
@@ -2105,22 +2105,22 @@ if (!__Pyx_RefNanny) {
   #endif
   __Pyx_TraceCall("__Pyx_PyMODINIT_FUNC PyInit_difference(void)", __pyx_f[0], 1, 0, __PYX_ERR(0, 1, __pyx_L1_error));
 
-  /* "difference.py":14
+  /* "difference.py":15
  *     y=cython.int,
  * )
  * def levenshtein(seq1, seq2):             # <<<<<<<<<<<<<<
  *     size_x = len(seq1) + 1
  *     size_y = len(seq2) + 1
  */
-  __pyx_t_1 = __Pyx_CyFunction_NewEx(&__pyx_mdef_10difference_1levenshtein, 0, __pyx_n_s_levenshtein, NULL, __pyx_n_s_difference, __pyx_d, ((PyObject *)__pyx_codeobj_)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 14, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_CyFunction_NewEx(&__pyx_mdef_10difference_1levenshtein, 0, __pyx_n_s_levenshtein, NULL, __pyx_n_s_difference, __pyx_d, ((PyObject *)__pyx_codeobj_)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 15, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_levenshtein, __pyx_t_1) < 0) __PYX_ERR(0, 14, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_levenshtein, __pyx_t_1) < 0) __PYX_ERR(0, 15, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
   /* "difference.py":1
- * # cython: profile=True             # <<<<<<<<<<<<<<
+ * # -*- coding: utf-8 -*-             # <<<<<<<<<<<<<<
+ * # cython: profile=True
  * 
- * import cython
  */
   __pyx_t_1 = __Pyx_PyDict_NewPresized(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);

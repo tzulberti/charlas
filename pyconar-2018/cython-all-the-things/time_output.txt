@@ -1,0 +1,17 @@
+cython-all-the-things benchmark
+
+real	0m3.123s
+user	0m3.081s
+sys	0m0.016s
+
+real	0m1.610s
+user	0m1.593s
+sys	0m0.007s
+
+real	0m0.876s
+user	0m0.853s
+sys	0m0.007s
+
+real	0m0.385s
+user	0m0.381s
+sys	0m0.002s

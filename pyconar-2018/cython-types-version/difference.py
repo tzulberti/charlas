@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+# cython: profile=True
 
 import cython
 
