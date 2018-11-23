@@ -1,0 +1,77 @@
+pure python benchmark
+
+real	0m18.580s
+user	0m18.547s
+sys	0m0.021s
+
+real	0m12.579s
+user	0m12.559s
+sys	0m0.008s
+
+real	0m9.540s
+user	0m9.529s
+sys	0m0.004s
+
+real	0m7.402s
+user	0m7.390s
+sys	0m0.008s
+Traceback (most recent call last):
+  File "main.py", line 26, in <module>
+    main()
+  File "main.py", line 14, in main
+    do_logic(file_content)
+  File "main.py", line 20, in do_logic
+    diff = levenshtein(string1, string2)
+  File "/media/data/Proyectos/charlas/meetup-pyar-2018-cython/pure-python/difference.py", line 8, in levenshtein
+    matrix = [[0] * size_y for _ in range(size_x)]
+  File "/media/data/Proyectos/charlas/meetup-pyar-2018-cython/pure-python/difference.py", line 8, in <listcomp>
+    matrix = [[0] * size_y for _ in range(size_x)]
+KeyboardInterrupt
+
+real	0m1.999s
+user	0m1.994s
+sys	0m0.004s
+pure python benchmark
+Traceback (most recent call last):
+  File "main.py", line 26, in <module>
+    main()
+  File "main.py", line 14, in main
+    do_logic(file_content)
+  File "main.py", line 20, in do_logic
+    diff = levenshtein(string1, string2)
+  File "/media/data/Proyectos/charlas/meetup-pyar-2018-cython/pure-python/difference.py", line 25, in levenshtein
+    matrix[x-1][y-1] + substitution_cost, #substitution
+KeyboardInterrupt
+
+real	0m18.163s
+user	0m18.141s
+sys	0m0.012s
+Traceback (most recent call last):
+  File "main.py", line 26, in <module>
+    main()
+  File "main.py", line 14, in main
+    do_logic(file_content)
+  File "main.py", line 20, in do_logic
+    diff = levenshtein(string1, string2)
+  File "/media/data/Proyectos/charlas/meetup-pyar-2018-cython/pure-python/difference.py", line 25, in levenshtein
+    matrix[x-1][y-1] + substitution_cost, #substitution
+KeyboardInterrupt
+
+real	0m0.966s
+user	0m0.945s
+sys	0m0.020s
+pure python benchmark
+Traceback (most recent call last):
+  File "main.py", line 26, in <module>
+    main()
+  File "main.py", line 14, in main
+    do_logic(file_content)
+  File "main.py", line 20, in do_logic
+    diff = levenshtein(string1, string2)
+  File "/media/data/Proyectos/charlas/meetup-pyar-2018-cython/pure-python/difference.py", line 25, in levenshtein
+    matrix[x-1][y-1] + substitution_cost, #substitution
+KeyboardInterrupt
+
+real	0m1.376s
+user	0m1.357s
+sys	0m0.016s
