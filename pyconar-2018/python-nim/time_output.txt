@@ -1,0 +1,17 @@
+python-nim benchmark
+
+real	0m0.351s
+user	0m0.314s
+sys	0m0.047s
+
+real	0m0.195s
+user	0m0.185s
+sys	0m0.011s
+
+real	0m0.108s
+user	0m0.094s
+sys	0m0.014s
+
+real	0m0.069s
+user	0m0.059s
+sys	0m0.010s
