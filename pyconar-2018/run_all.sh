@@ -1,6 +1,6 @@
 # delete all the cython generated files
-find . -name "*.pyc" -exec rm -rf {} \; 
-find . -name "*.so" -exec rm -rf {} \; 
+find . -name "*.pyc" -exec rm -rf {} \;
+find . -name "*.so" -exec rm -rf {} \;
 find . -name "*.pyo" -exec rm -rf {} \;
 rm -rf pure-c/levenshtein
 
@@ -98,3 +98,15 @@ cythonize --inplace difference.py
 { time python main.py ../dataset.15.txt ; } 2>> time_output.txt
 
 
+cd ../python-nim
+deactivate
+source ~/envs/charlas2/bin/activate
+rm -rf time_output.txt
+
+echo 'python-nim benchmark' >> time_output.txt
+nim c -d:release --app:lib --gc:markAndSweep --out:difference.so difference.nim
+
+{ time python main.py ../dataset.1.txt ; } 2>> time_output.txt
+{ time python main.py ../dataset.3.txt ; } 2>> time_output.txt
+{ time python main.py ../dataset.7.txt ; } 2>> time_output.txt
+{ time python main.py ../dataset.15.txt ; } 2>> time_output.txt
