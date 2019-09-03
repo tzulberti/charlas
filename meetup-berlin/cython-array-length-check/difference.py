@@ -1,14 +1,22 @@
 # -*- coding: utf-8 -*-
 
-import numpy
+import cython
 
 
+@cython.boundscheck(False)
+@cython.locals(
+    seq1=str,
+    seq2=str,
+    matrix=list,
+    size_x=cython.int,
+    size_y=cython.int,
+    x=cython.int,
+    y=cython.int,
+)
 def levenshtein(seq1, seq2):
     size_x = len(seq1) + 1
     size_y = len(seq2) + 1
     matrix = [[0] * size_y for _ in range(size_x)]
-
-    matrix = numpy.zeros((size_x, size_y), numpy.int32)
 
     for x in range(size_x):
         matrix[x][0] = x
