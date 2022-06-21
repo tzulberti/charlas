@@ -1,5 +1,5 @@
 cython==0.28.5
-numpy==1.15.0
+numpy==1.22.0
 
 # only used by the generate_dataset.py
 requests
